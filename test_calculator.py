@@ -38,7 +38,7 @@ class TestCalculator(unittest.TestCase):
         self.assertRaises(ZeroDivisionError, div(0,5))
 
     def test_logarithm(self): # 3 assertions
-        self.assertEqual(logarithm(5,125),3)
+        self.assertEqual(logarithm(2,256),8)
         self.assertEqual(logarithm(3,81),4)
         self.assertEqual(logarithm(2,32),5)
 
