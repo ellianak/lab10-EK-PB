@@ -1,3 +1,7 @@
+# https://github.com/ellianak/lab10-EK-PB.git
+# Elliana Kirby
+# Parker Brock
+
 """
 calculator.py
 - Defines functions used to create a simple calculator

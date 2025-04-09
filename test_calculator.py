@@ -1,3 +1,7 @@
+# https://github.com/ellianak/lab10-EK-PB.git
+# Elliana Kirby
+# Parker Brock
+
 import unittest
 from calculator import *
 
