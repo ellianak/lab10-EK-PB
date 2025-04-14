@@ -20,14 +20,14 @@ class TestCalculator(unittest.TestCase):
 
     ######## Partner 1
     def test_multiply(self): # 3 assertions
-        self.assertTrue(mul(2, 2))
-        self.assertTrue(mul(-3, 4))
-        self.assertTrue(mul(-5, -7))
+        self.assertEqual(mul(2, 2),2)
+        self.assertEqual(mul(-3, 4),-12)
+        self.assertEqual(mul(-5, -7),35)
 
     def test_divide(self): # 3 assertions
-        self.assertTrue(div(2, 3))
-        self.assertTrue(div(-4, -5))
-        self.assertTrue(div(5, -4))
+        self.assertEqual(div(2, 3),2/3)
+        self.assertEqual(div(-4, -5),0.8)
+        self.assertEqual(div(5, -4),-1.25)
     # ##########################
 
     ######## Partner 2
@@ -35,15 +35,13 @@ class TestCalculator(unittest.TestCase):
     #     # call division function inside, example:
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #     div(0, 5)
-        self.assertRaises(ZeroDivisionError, div(0,5))
+        with self.assertRaises(ZeroDivisionError):
+            div(5,0)
 
     def test_logarithm(self): # 3 assertions
-        # self.assertEqual(logarithm(256,2),8)
-        # self.assertEqual(logarithm(81,3),4)
-        # self.assertEqual(logarithm(32,2),5)
-        self.assertFalse(logarithm(2, 2))
-        self.assertFalse(logarithm(2, 3))
-        self.assertFalse(logarithm(2, 4))
+        self.assertEqual(logarithm(256,2),8)
+        self.assertEqual(logarithm(81,3),4)
+        self.assertEqual(logarithm(32,2),5)
 
     def test_log_invalid_base(self): # 1 assertion
         self.assertRaises(ValueError, logarithm(-5,125))
