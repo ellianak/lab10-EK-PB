@@ -36,7 +36,7 @@ class TestCalculator(unittest.TestCase):
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #     div(0, 5)
         with self.assertRaises(ZeroDivisionError):
-            div(5,0)
+            div(0,5)
 
     def test_logarithm(self): # 3 assertions
         self.assertAlmostEqual(logarithm(256,2),8)
