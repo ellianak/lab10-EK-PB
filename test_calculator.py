@@ -44,14 +44,16 @@ class TestCalculator(unittest.TestCase):
         self.assertAlmostEqual(logarithm(32,2),5)
 
     def test_log_invalid_base(self): # 1 assertion
-        self.assertRaises(ValueError, logarithm(-5,125))
+        with self.assertRaises(ValueError):
+            logarithm(-5, 125)
     
     ######## Partner 1
     def test_log_invalid_argument(self): # 1 assertion
         # call log function inside, example:
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #     logarithm(0, 5)
-        self.assertRaises(ValueError, logarithm(4, 0))
+        with self.assertRaises(ValueError):
+            logarithm(4, 0)
 
     def test_hypotenuse(self): # 3 assertions
         self.assertTrue(hypotenuse(2, 2))
@@ -62,7 +64,8 @@ class TestCalculator(unittest.TestCase):
         # Test for invalid argument, example:
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #    square_root(NUM)
-        self.assertRaises(ValueError, square_root(-4))
+        with self.assertRaises(ValueError):
+            square_root(-4)
         # Test basic function
         self.assertTrue(square_root(2))
         self.assertTrue(square_root(4))
